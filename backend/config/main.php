@@ -29,6 +29,25 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'i18n' => [
+            'translations' => [
+                'backend' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@backend/messages',
+                    'sourceLanguage' => 'en_US',
+                    'fileMap' => [
+                        'backend' => 'backend.php',
+                    ],
+                ],
+            ],
+        ],
+        'actsAsTenant' => [
+            'class' => 'common\actsAsTenant\ActsAsTenant',
+            'tenantModelClass' => 'common\models\Tenant',
+        ]
+    ],
+    'as beforeRequest' => [
+        'class' => 'common\actsAsTenant\filters\TenantFilter',
     ],
     'params' => $params,
 ];
