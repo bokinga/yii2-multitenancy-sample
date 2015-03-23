@@ -2,8 +2,8 @@
 
 namespace common\models;
 
-use common\actsAsTenant\behaviors\TenantBehavior;
-use common\actsAsTenant\ActsAsTenantTrait;
+use CrazyStudio\ActsAsTenant\ActsAsTenantTrait;
+use CrazyStudio\ActsAsTenant\behaviors\TenantBehavior;
 use Yii;
 
 /**

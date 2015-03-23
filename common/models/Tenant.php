@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use common\actsAsTenant\TenantTrait;
+use CrazyStudio\ActsAsTenant\TenantTrait;
 use Yii;
 
 /**

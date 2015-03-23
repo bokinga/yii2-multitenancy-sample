@@ -42,12 +42,13 @@ return [
             ],
         ],
         'actsAsTenant' => [
-            'class' => 'common\actsAsTenant\ActsAsTenant',
+            'class' => 'CrazyStudio\ActsAsTenant\ActsAsTenant',
             'tenantModelClass' => 'common\models\Tenant',
+            'domainModelClass' => 'common\models\Domain',
         ]
     ],
     'as beforeRequest' => [
-        'class' => 'common\actsAsTenant\filters\TenantFilter',
+        'class' => 'CrazyStudio\ActsAsTenant\filters\TenantFilter',
     ],
     'params' => $params,
 ];
